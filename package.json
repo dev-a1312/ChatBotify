@@ -1,0 +1,78 @@
+{
+  "name": "react-chatbotify",
+  "homepage": "https://react-chatbotify.tjtanjin.com",
+  "keywords": [
+    "react",
+    "chat",
+    "chatbot",
+    "conversational-bot",
+    "frontend-library"
+  ],
+  "files": [
+    "./dist"
+  ],
+  "version": "1.6.0",
+  "description": "A modern React library for creating a flexible and extensible chatbot.",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./dist/react-chatbotify.css": {
+      "import": "./dist/react-chatbotify.css",
+      "require": "./dist/react-chatbotify.css"
+    }
+  },
+  "scripts": {
+    "lint": "eslint --fix . --ext .tsx",
+    "test": "node ./test/RunTests.js",
+    "build": "tsc && vite build && cp ./dist/index.d.ts ./dist/index.d.cts",
+    "prepublishOnly": "tsc && vite build && cp ./dist/index.d.ts ./dist/index.d.cts",
+    "prepack": "tsc && vite build && cp ./dist/index.d.ts ./dist/index.d.cts",
+    "start": "vite serve",
+    "prepare": "husky install"
+  },
+  "author": "tjtanjin",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tjtanjin/react-chatbotify"
+  },
+  "devDependencies": {
+    "@types/dom-speech-recognition": "^0.0.4",
+    "@types/react": "^18.2.14",
+    "@types/react-dom": "^18.2.6",
+    "@typescript-eslint/eslint-plugin": "^5.60.1",
+    "@vitejs/plugin-react": "^4.0.4",
+    "chromedriver": "^125.0.0",
+    "eslint": "^8.43.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-react": "^7.32.2",
+    "husky": "^8.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "selenium-webdriver": "^4.21.0",
+    "typescript": "^5.1.6",
+    "vite": "^4.5.3",
+    "vite-plugin-dts": "^3.4.0",
+    "vite-plugin-eslint": "^1.8.1",
+    "vite-plugin-svgr": "^3.2.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

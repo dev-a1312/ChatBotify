@@ -1,0 +1,105 @@
+/* ChatBot Header */
+
+.rcb-chat-header-container {
+	padding: 12px;
+	color: #fff;
+	border-bottom: 1px solid #ccc;
+	display: flex;
+	justify-content: space-between;
+	max-height: 55px;
+}
+
+.rcb-chat-header {
+	display: flex;
+	flex-direction: row;
+}
+
+/* ChatBot Avatar */
+
+.rcb-bot-avatar {
+	background-size: cover;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	margin-right: 12px;
+}
+
+/* Notification & Audio Icon */
+
+.rcb-notification-icon-on,
+.rcb-notification-icon-off,
+.rcb-audio-icon-on,
+.rcb-audio-icon-off {
+	position: relative;
+	display: inline-block;
+	background-size: cover;
+	width: 30px;
+	height: 30px;
+	border: none;
+	cursor: pointer;
+	margin-left: 5px;
+}
+
+.rcb-notification-icon-off,
+.rcb-audio-icon-off {
+	filter: grayscale(100%);
+}
+
+.rcb-notification-icon-on::after,
+.rcb-notification-icon-off::after,
+.rcb-audio-icon-on::after,
+.rcb-audio-icon-off::after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 0;
+	height: 0;
+	background-color: rgba(0, 0, 0, 0.1);
+	border-radius: 50%;
+	opacity: 0;
+	transition: width 0.2s ease-out, height 0.2s ease-out, opacity 0.2s ease-out;
+}
+  
+.rcb-notification-icon-on:hover::after,
+.rcb-notification-icon-off:hover::after,
+.rcb-audio-icon-on:hover::after,
+.rcb-audio-icon-off:hover::after {
+	width: 130%;
+	height: 130%;
+	opacity: 1;
+}
+
+/* Close Chat Icon */
+
+.rcb-close-chat-icon {
+	position: relative;
+	display: inline-block;
+	background-size: cover;
+	width: 30px;
+	height: 30px;
+	border: none;
+	margin-left: 5px;
+	cursor: pointer;
+}
+
+.rcb-close-chat-icon::after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 0;
+	height: 0;
+	background-color: rgba(0, 0, 0, 0.1);
+	border-radius: 50%;
+	opacity: 0;
+	transition: width 0.2s ease-out, height 0.2s ease-out, opacity 0.2s ease-out;
+}
+
+.rcb-close-chat-icon:hover::after {
+	width: 130%;
+	height: 130%;
+	opacity: 1;
+}
